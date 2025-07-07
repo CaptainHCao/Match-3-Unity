@@ -10,6 +10,9 @@
 
   However, in the `Fill()` method, a `List<NormalItem.eNormalType>` was being created during every entry into a double loop, which is **much worse** than instantiating a `Cell`. This performance issue has been resolved using a temporary holder list that is reused by multiple methods.
 
+**Script(s) add**: `ItemManager.cs`
+**Scrtip(s) modified**: `GameManager.cs`, `Cell.cs`, `BoardController.cs`,  `Board.cs`
+  
 ---
 
 ### 2. Reskin Item Textures with ScriptableObject
@@ -26,6 +29,8 @@ An editor tool has been created under `Assets/Scripts/Editor`.
    - `Normal/Special Item Set` for the `PrefabSet` ScriptableObject
 4. Click **"Assign Sprites from SO"** and the textures will be applied to the prefabs in the Editor.
 
+**Script(s) add**: `ItemManager.cs`, `PrefabSet.cs`, `TextureSet.cs`
+
 ---
 
 ### 3. Restart Button
@@ -33,6 +38,9 @@ An editor tool has been created under `Assets/Scripts/Editor`.
 A **Restart** button has been added. Players can restart the current game mode, which will:
 - Spawn a new board
 - Reset the timer or move count
+
+**Script(s) add**: `UIPanelRestart.cs`
+**Script(s) add**: `UIMainManager.cs`
 
 ---
 
@@ -42,6 +50,8 @@ A **Restart** button has been added. Players can restart the current game mode, 
 - Track current item types on the board
 - Spawn new items **avoiding matches** with the 4 neighboring cells
 - **Prioritize spawning** item types that are least present on the board
+
+**Scrtip(s) modified**: `Board.cs`
 
 ---
 
