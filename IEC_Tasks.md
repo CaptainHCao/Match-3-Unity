@@ -11,6 +11,7 @@
   However, in the `Fill()` method, a `List<NormalItem.eNormalType>` was being created during every entry into a double loop, which is **much worse** than instantiating a `Cell`. This performance issue has been resolved using a temporary holder list that is reused by multiple methods.
 
 **Script(s) add**: `ItemManager.cs`
+
 **Scrtip(s) modified**: `GameManager.cs`, `Cell.cs`, `BoardController.cs`,  `Board.cs`
   
 ---
@@ -40,6 +41,7 @@ A **Restart** button has been added. Players can restart the current game mode, 
 - Reset the timer or move count
 
 **Script(s) add**: `UIPanelRestart.cs`
+
 **Script(s) add**: `UIMainManager.cs`
 
 ---
